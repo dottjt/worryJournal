@@ -1,0 +1,14 @@
+.eventlist {
+  width: 400px;
+  height: 400px;
+  list-style-type: none;
+  float: left;
+}
+
+.eventlist__event {
+  width: 400px;
+  height: 100px;
+  border: 1px solid;
+}
+
+
