@@ -1,5 +1,5 @@
-var counter = 0;
-var dateToday = new Date();
+var uuid = require('node-uuid')
+
 var dateOptions = {
     year: "numeric", month: "short",
     day: "numeric"
@@ -10,8 +10,8 @@ export function addEvent(eventTitle) {
     type:"ADD_EVENT",
     payload: {
       eventTitle: eventTitle,
-      date: dateToday.toLocaleDateString("en-US", dateOptions),
-      id: counter++
+      date: new Date().toLocaleDateString("en-US", dateOptions),
+      id: uuid.v4()
     }
   }
 }

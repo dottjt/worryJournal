@@ -14,17 +14,16 @@ export function AddEvent(props) {
     if (enterKey && len) {
       event.preventDefault();
       input.value = '';
-      addEvent(title, description);
+      addEvent(text);
     };
   }
-
 
   return (
     <form className="addevent__form">
       <h1>What is making you feel worried?</h1>
       <input name="title" type='text' placeholder='Add event' onKeyDown={onSubmit} />
       <h1>Why is it making you feel worried?</h1>
-      <input name="description" type='textarea' placeholder="Don\'t be shy!"
+      <input name="description" type='textarea' placeholder="Don\'t be shy!"/>
     </form>
   );
 }

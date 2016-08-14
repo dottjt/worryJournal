@@ -9,14 +9,12 @@ import './index.css';
 const store = createStore(reducer);
 
 ReactDOM.render(
-  <div>
-    <Provider store={store}>
-      <EventList/>
-    </Provider>
-    <Provider store={store}>
-      <AddEvent/>
-    </Provider>
-  </div>,
+  <Provider store={store}>
+    <div>
+        <EventList/>
+        <AddEvent/>
+    </div>
+  </Provider>,
   document.getElementById('root')
 );
 
